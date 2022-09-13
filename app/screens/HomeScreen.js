@@ -1,13 +1,19 @@
-import { View, Text } from 'react-native'
+import { View, Text, Button } from 'react-native'
 import React, {useEffect, useState} from 'react'
 import {getExhibitions} from '../Api.js'
+import * as Tts from 'expo-speech';
 
 const HomeScreen = () => {
   const [Exhibition, setExhibition] = useState([])
+  const [text, setText] = useState('')
 
+  const speak = () =>{
+    Tts.speak(text)
+  }
   const getExhibition = async () => {
     const data = await getExhibitions()
     setExhibition(data)
+    setText(Exhibition.description)
   }
   
   useEffect(() => {
@@ -16,7 +22,7 @@ const HomeScreen = () => {
 
   return (
     <View>
-      <Text>{Exhibition.description}</Text>
+      <Button title="Press to hear some words" onPress={speak} />
     </View>
   )
 }
