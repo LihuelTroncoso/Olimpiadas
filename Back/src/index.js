@@ -1,3 +1,4 @@
-const greet = 'hello world SHEEE'
+import app from './app.js';
 
-console.log(greet)
+app.listen(3000)
+console.log('lasdjksdlajk')
