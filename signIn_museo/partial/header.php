@@ -2,21 +2,18 @@
 <header class="site-header sticky-top">    
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid ">
-        <a class="navbar-brand mb-0 h1" href="index.php">Museo</a>
+        <a class="navbar-brand mb-0 h1" href="index.php">MusET36</a>
         <!-- Barra para menu -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-between" id="navbarNavDarkDropdown">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Reseñas</a>
-            </li>
-            <li class="nav-item">
+            <li id="juegos" style="none" class="nav-item">
                 <a class="nav-link" href="#">Juegos</a>
             </li>
             
-            <li class="nav-item dropdown">
+            <li id="turnos" style="none" class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Turnos Disponibles
             </a>
@@ -28,16 +25,22 @@
                 <li><button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalNoche">Turno Noche</button></li>
             </ul>
             </li>
+            
             <!-- Cerrar Sesión -->
             <li style="none" id="btn_cerrar"class="nav-item">
                 <a class="nav-link" href="./php/logout.php">Cerrar Sesión</a>
             </li>
+            <!---muestro las opciones de turnos y juegos  cuando se inicia sesion--->
             <script>
                 var versesion = '<?=$versesion?>';
                 if(versesion=="1"){
-                    btn_cerrar.style.display = "inline"
+                    btn_cerrar.style.display="inline"
+                    turnos.style.display = "inline"
+                    juegos.style.display = "inline"
                 }else{
+                    turnos.style.display="none"
                     btn_cerrar.style.display="none"
+                    juegos.style.display = "none"
                 }
             </script>
             

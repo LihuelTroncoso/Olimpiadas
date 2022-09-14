@@ -48,16 +48,20 @@
 <div class="container text-center">
     <h4 class = "display-1 fw-bold">Museo</h4>
     <br>
-    <p class="my-5 fw-bold">Bienvenido a nuestro museo, gracias por elegirnos y esperamos que esté satisfecho con nuestro servicio.<br>
-        ¡Ingrese ahora mismo para poder comenzar con tu visita!</p>
+    <p class="my-5 fw-bold">Bienvenido a nuestro museo, gracias por elegirnos y esperamos que esté satisfecho con nuestro servicio.</p>
+    <p id="ingreso" style="inline" class="my-5 fw-bold">¡Ingrese ahora mismo para poder comenzar con tu visita!</p>
+    <br>
         <div id="btn_ingreso"style="inline" class="text-center fw-bold ">
             <a href="./singIn.php"  class="btn btn-outline-dark btn-lg">Ingresar ahora</a>
          </div>
+         <!---oculto el boton de ingreso cuando ya se ingreso--->
          <script>
         var versesion = '<?=$versesion?>';
         if(versesion=="1"){
+          ingreso.style.display = "none"
           btn_ingreso.style.display = "none"
         }else{
+          ingreso.style.display="inline"
           btn_ingreso.style.display="inline"
         }
       </script>
