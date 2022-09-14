@@ -6,7 +6,12 @@ export const getExhibitions = async (code) => {
     return await res.json()
 }
 
-export const getExhibitionByCode = async (code) => {
-    const res = await fetch(`${API}exhibitions/${code}`);
+export const getExhibitionByLocation = async (location) => {
+    const res = await fetch(`${API}exhibition/${location}`);
     return await res.json();
 };
+
+export const getLocationByUser = async (id) => {
+    const res = await fetch(`${API}location/${id}`);
+    return await res.json();
+}

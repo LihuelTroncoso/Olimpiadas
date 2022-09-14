@@ -7,4 +7,5 @@ const app = express();
 
 app.use(exhibitionsRoutes);
 
+
 export default app;
