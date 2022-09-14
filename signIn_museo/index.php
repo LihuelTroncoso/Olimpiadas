@@ -75,6 +75,27 @@
     <h4 class = "display-4 fw-bold">Mapa del museo</h4>
     <br>
     <img src="assets/img/MapaMuseo.jpg" class="img-fluid" alt="">
+    <br>
+    <br>
+    <!-- BOTONES MAPA -->
+    <button type ="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modal1" >
+        <img src ="assets/img/numero1.png" class ="img-fluid" width="100" style ="margin: 5px">
+    </button>
+    <button type ="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modal2" >
+        <img src ="assets/img/numero2.png" class ="img-fluid" width="100" style ="margin: 5px">
+    </button>
+    <button type ="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modal3" >
+        <img src ="assets/img/numero3.png" class ="img-fluid" width="100" style ="margin: 5px">
+    </button>
+    <button type ="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modal4" >
+        <img src ="assets/img/numero4.png" class ="img-fluid" width="100" style ="margin: 5px">
+    </button>
+    <button type ="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modal5" >
+        <img src ="assets/img/numero5.png" class ="img-fluid" width="100" style ="margin: 5px">
+    </button>
+    <button type ="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modal6" >
+        <img src ="assets/img/numero6.png" class ="img-fluid" width="100" style ="margin: 5px">
+    </button>   
 
     <!-- <h4 class = "display-6 fw-bold">Visita 1</h4>
     <img src="assets/img/visita 1.jpg" class="img-fluid " alt="">
@@ -84,7 +105,12 @@
     <img src="assets/img/visita 3.jpg" class="img-fluid " alt=""> -->
 </div>
       
-
+<?php require 'partial/modal1.php' ?>
+<?php require 'partial/modal2.php' ?>
+<?php require 'partial/modal3.php' ?>
+<?php require 'partial/modal4.php' ?>
+<?php require 'partial/modal5.php' ?>
+<?php require 'partial/modal6.php' ?>
 
 <!-- Informacion Extra -->
 <div class="container-fluid">
