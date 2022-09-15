@@ -15,3 +15,8 @@ export const getLocationByUser = async (id) => {
     const res = await fetch(`${API}location/${id}`);
     return await res.json();
 }
+
+export const getGames = async () => {
+    const res = await fetch(`${API}games`);
+    return await res.json();
+}

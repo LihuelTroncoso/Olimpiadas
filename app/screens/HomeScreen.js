@@ -9,7 +9,7 @@ const Styles = StyleSheet.create({
   }
 })
 
-const HomeScreen = () => {
+const HomeScreen = ({navigation}) => {
   const [Exhibition, setExhibition] = useState([])
   const [text, setText] = useState('')
   const [location, setLocation] = useState(0)
@@ -36,7 +36,7 @@ const HomeScreen = () => {
   const getExhibition = async(id) => {
     const data = await getExhibitionByLocation(id)
     setExhibition(data)
-    console.log(Exhibition.description)
+    console.log(Exhibition)
     setText(Exhibition.description)
     console.log(text)
   }
@@ -47,9 +47,10 @@ const HomeScreen = () => {
 
   return (
     <View>
-      <Button title="Presione para escuchar una descripcion de esta obra" style={Styles.button} onPress={speak} />
+      <Button title="Presione para escuchar una descripcion de esta obra" onPress={speak} />
       <Button title="Presione para dejar de escuchar" onPress={stopSpeak}/>
       <Button title="Simular cambio de ubicacion" onPress={getLocation}/>
+      <Button title={'¡Juegos!'} onPress={()=>navigation.navigate('GamesScreen')}/>
     </View>
   )
 }

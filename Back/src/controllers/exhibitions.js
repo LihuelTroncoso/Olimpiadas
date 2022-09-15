@@ -22,3 +22,9 @@ export const getLocationByUser = async (req, res) => {
     ]);
     res.json(rows[0][0]);
 }
+
+export const getGames = async (req, res) =>{
+    const connection = await connect();
+    const [rows] = await connection.execute("SELECT * FROM games");
+    res.json(rows);
+} 
