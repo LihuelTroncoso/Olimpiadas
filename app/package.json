@@ -12,6 +12,7 @@
     "@react-native-community/masked-view": "^0.1.11",
     "@react-navigation/native": "^6.0.12",
     "@react-navigation/native-stack": "^6.8.0",
+    "@vitalets/google-translate-api": "^8.0.0",
     "expo": "~46.0.9",
     "expo-speech": "~10.3.0",
     "expo-status-bar": "~1.4.0",

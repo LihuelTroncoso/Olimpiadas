@@ -1,4 +1,4 @@
-const API = 'http://192.168.0.105:3000/'
+const API = 'http://190.105.238.84:3000/'
 
 export const getExhibitions = async (code) => {
     console.log(`${API}exhibitions`)
